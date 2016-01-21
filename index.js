@@ -28,7 +28,7 @@ module.exports = {
 
     if (appConfig !== cachedConfig) {
       fs.writeFileSync(cachedConfigPath, appConfig, { encoding: 'utf8'});
-      return olBuilder.build(configPath, outputPath);
+      return olBuilder.build(outputPath);
     }
   }
 };
