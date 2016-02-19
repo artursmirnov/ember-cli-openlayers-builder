@@ -10,11 +10,17 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/artursmirnov/ember-cli-openlayers-builder",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artursmirnov/ember-cli-openlayers-builder.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "Artur Smirnov <mail@artursmirnov.com>",
+  "author": {
+    "name": "Artur Smirnov",
+    "email": "mail@artursmirnov.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -51,5 +57,15 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "defaultBlueprint": "openlayers-build-init"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/artursmirnov/ember-cli-openlayers-builder/issues"
+  },
+  "homepage": "https://github.com/artursmirnov/ember-cli-openlayers-builder#readme",
+  "maintainers": [
+    {
+      "name": "artursmirnov",
+      "email": "mail@artursmirnov.com"
+    }
+  ]
 }

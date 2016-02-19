@@ -28,6 +28,19 @@ namespaces you use in your app. This allows to minimize the library size.
 
 After next application rebuild the configuration would be applied and Openlayers would rebuild.
 
+## Library usage
+
+Inside your Ember application you can access Openlayers library by importing it from `<app_name/ol>`.
+Lets say your application name is `map`. Then:
+```javascript
+import Ember from 'ember';
+import ol from 'map/ol';
+
+export default Ember.Component.extend({
+  // use ol in regular way
+});
+```
+
 ## Extra features
 
 Addon provides some useful extra features that may simplify debugging.
