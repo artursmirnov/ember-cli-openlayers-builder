@@ -30,16 +30,7 @@ After next application rebuild the configuration would be applied and Openlayers
 
 ## Library usage
 
-Inside your Ember application you can access Openlayers library by importing it from `<app_name/ol>`.
-Lets say your application name is `map`. Then:
-```javascript
-import Ember from 'ember';
-import ol from 'map/ol';
-
-export default Ember.Component.extend({
-  // use ol in regular way
-});
-```
+Openlayers is available in global namespace so you can access it everywhere in the app via `ol.*`;
 
 ## Extra features
 
