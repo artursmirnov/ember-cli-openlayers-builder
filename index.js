@@ -1,7 +1,7 @@
 /* jshint node: true */
 'use strict';
 
-var fs = require('fs');
+var fs = require('fs-extra');
 var path = require('path');
 var olBuilder = require('./lib/openlayers-builder');
 
@@ -34,6 +34,8 @@ module.exports = {
 
   included: function(app) {
     this._super.included.apply(this, arguments);
-    app.import(app.project.bowerDirectory + '/ol/ol.js', { prepend: true });
+    var olPath = app.project.bowerDirectory + '/ol/ol.js';
+    fs.ensureFileSync(olPath);
+    app.import(olPath, { prepend: true });
   }
 };
