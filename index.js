@@ -11,8 +11,8 @@ module.exports = {
   preBuild: function() {
 
     var configPath = '.ol-build';
-    var cachedConfigPath = path.join(this.root, 'addon', '.ol-build');
-    var outputPath = path.join(this.root, 'addon', 'ol.js');
+    var cachedConfigPath = path.join(this.root, 'cache', '.ol-build');
+    var outputPath = path.join(this.project.root, this.project.bowerDirectory, 'ol', 'ol.js');
 
     var appConfig = "";
     var cachedConfig = "";
@@ -30,5 +30,10 @@ module.exports = {
       fs.writeFileSync(cachedConfigPath, appConfig, { encoding: 'utf8'});
       return olBuilder.build(outputPath);
     }
+  },
+
+  included: function(app) {
+    this._super.included.apply(this, arguments);
+    app.import(app.project.bowerDirectory + '/ol/ol.js', { prepend: true });
   }
 };
