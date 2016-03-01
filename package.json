@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-openlayers-builder",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Install and create a custom build of Openlayers library for Ember app.",
   "directories": {
     "test": "tests"
